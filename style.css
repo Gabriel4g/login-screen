@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+:root {
+    --verde: #04C35C;
+    --azul: #2B6CB0;
+    --branco: #F7FAFC;
+}
+
+#buttons-mode {
+    position: absolute;
+    top: 0;
+    font-family: 'Lato', sans-serif;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#darkmode {
+    height: 35px;
+    width: 35px;
+    font-weight: 700;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 25px;
+    border: 2px solid #1A202C;
+    padding: 3px;
+}
+
+#lightmode {
+    height: 37px;
+    width: 35px;
+    border: 2px solid #1A202C;
+    font-weight: 700;
+    font-family: sans-serif;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 25px;
+}
+
+
+#side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--branco);
+    width: 50%;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 3em;
+}
+
+.title {
+    padding: 25px 0 15px 0;
+    font-family: 'Merriweather', sans-serif;
+}
+
+.title h4 {
+    font-size: 17px;
+    padding-bottom: 6px;
+}
+
+form .box-email {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato';
+}
+
+form .box-email label {
+    line-height: 40px;
+}
+
+form .box-email input {
+    height: 50px;
+    width: 365px;
+    border-radius: 5px;
+    border: 1px solid #E8E8E8;
+    outline: none;
+}
+
+form .box-email input::placeholder {
+    color: #1A202C;
+    font-size: 14px;
+    padding-left: 17px;
+}
+
+form .box-password {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato';
+}
+
+form .box-password input {
+    height: 50px;
+    width: 365px;
+    border-radius: 5px;
+    border: 1px solid #E8E8E8;
+    outline: none;
+}
+
+form .box-password label {
+    line-height: 40px;
+}
+
+form .box-password input::placeholder {
+    color: #1A202C;
+    padding-left: 17px;
+    font-size: 14px;
+}
+
+form .options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+form .options .remember {
+    font-family: 'Lato';
+    font-size: 15px;
+}
+
+form .options .remember label {
+    padding-right: 70px;
+    padding-left: 5px;
+    font-size: 16.5px;
+}
+
+form .options .remember input[type=radio] {
+    background: var(--branco);
+    accent-color: #7b1f92;
+    height: 12px;
+}
+
+form .options .remember a {
+    text-decoration: none;
+    color: var(--azul);
+    font-size: 16.5px;
+}
+
+#button-primary {
+    background: #04C35C;
+    height: 50px;
+    width: 365px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2em;
+    outline: 1px solid #ffff;
+    outline-offset: 1px;
+    cursor: pointer;
+}
+
+#button-primary p {
+    color: #ffff;
+    font-weight: 700;
+    font-family: 'Lato';
+    font-size: 16px;
+}
+
+#button-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 365px;
+    border: none;
+    border-radius: 5px;
+    background: #1A202C;
+    margin-top: 1.5em;
+    cursor: pointer;
+    position: relative;
+    outline: 1px solid #ffff;
+    outline-offset: 1px;
+}
+
+#button-secondary p {
+    font-size: 16px;
+    font-family: 'Lato';
+    font-weight: 700;
+    color: #ffff;
+}
+
+#button-secondary svg {
+    position: absolute;
+    left: 55px;
+}
+
+.p-register {
+    margin-top: 4em;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.p-register a {
+    text-decoration: none;
+    color: var(--azul);
+}
+
+@media only screen and (max-width: 600px) {
+    #side {
+        display: none;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #side {
+        display: none;
+    }
+
+    .p-register {
+        margin-top: 2em;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+
+    .p-register {
+        margin-top: 2em;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,4 +1,4 @@
-## <i> Login screen, com Dark mode feito em JS 🌚 <i/>
+## <i> Login screen 🌚 <i/>
   
 ![alt text](https://github.com/Gabriel4g/Login-screen/blob/main/images/tela.png?raw=true)
 

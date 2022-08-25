@@ -55,7 +55,6 @@ body {
     margin: 25px;
 }
 
-
 #side {
     display: flex;
     justify-content: center;
@@ -223,7 +222,6 @@ form .options .remember a {
     #side {
         display: none;
     }
-
     form {
         width: 100%;
         display: flex;
@@ -236,11 +234,9 @@ form .options .remember a {
     #side {
         display: none;
     }
-
     .p-register {
         margin-top: 2em;
     }
-
     form {
         width: 100%;
         display: flex;
@@ -250,7 +246,6 @@ form .options .remember a {
 }
 
 @media only screen and (max-width: 1010px) {
-
     .p-register {
         margin-top: 2em;
     }
@@ -260,8 +255,43 @@ form .options .remember a {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
+}
+
+#password-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+#password-value {
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    margin-top: 10px;
+}
+
+#btn-senha {
+    height: 35px;
+    width: 200px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    border-radius: 5px;
+    outline: 1px solid rgb(21, 202, 172);
+    outline-offset: 2px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background: #278854;
+    opacity: 0;
+}
+
+.opacity {
+    opacity: 0;
 }

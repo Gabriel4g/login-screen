@@ -69,51 +69,35 @@ buttonprimary.addEventListener('click', (e) => {
 const btnSenha = document.querySelector("#btn-senha")
 const userPassword = document.querySelector("#password-value");
 
-function appearButton() {
-    setInterval(() => {
-        if (senha.value) {
-            return btnSenha.style.opacity = 1
-        }
-
-        return btnSenha.style.opacity = 0
-    }, 100);
-}
-
-appearButton()
-
 function showPassword() {
-    const clone_password = userPassword.classList.toggle("opacity");
-
-    if (clone_password) {
+    if(senha.getAttribute("type") === "password") {
+        senha.setAttribute("type", "text");
         btnSenha.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock-open" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye-check" width="25" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <rect x="5" y="11" width="14" height="10" rx="2" />
-        <circle cx="12" cy="16" r="1" />
-        <path d="M8 11v-5a4 4 0 0 1 8 0" />
+        <circle cx="12" cy="12" r="2" />
+        <path d="M12 19c-4 0 -7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7c-.42 .736 -.858 1.414 -1.311 2.033" />
+        <path d="M15 19l2 2l4 -4" />
       </svg>
         `
     }
 
     else {
+        senha.setAttribute("type", "password");
         btnSenha.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye-off" width="25" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <rect x="5" y="11" width="14" height="10" rx="2" />
-        <circle cx="12" cy="16" r="1" />
-        <path d="M8 11v-4a4 4 0 0 1 8 0v4" />
+        <line x1="3" y1="3" x2="21" y2="21" />
+        <path d="M10.584 10.587a2 2 0 0 0 2.828 2.83" />
+        <path d="M9.363 5.365a9.466 9.466 0 0 1 2.637 -.365c4 0 7.333 2.333 10 7c-.778 1.361 -1.612 2.524 -2.503 3.488m-2.14 1.861c-1.631 1.1 -3.415 1.651 -5.357 1.651c-4 0 -7.333 -2.333 -10 -7c1.369 -2.395 2.913 -4.175 4.632 -5.341" />
       </svg>
         `
     }
-
-    setInterval(() => {
-        userPassword.innerHTML = senha.value
-    }, 100)
 }
 
 btnSenha.addEventListener('click', (e) => {
     e.preventDefault();
-
+    
     showPassword()
 })
 

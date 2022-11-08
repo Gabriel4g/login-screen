@@ -99,12 +99,13 @@ form .box-email input {
     border-radius: 5px;
     border: 1px solid #E8E8E8;
     outline: none;
+    padding-left: 17px;
 }
 
 form .box-email input::placeholder {
     color: #1A202C;
     font-size: 14px;
-    padding-left: 17px;
+    padding-left: 10px;
 }
 
 form .box-password {
@@ -119,6 +120,7 @@ form .box-password input {
     border-radius: 5px;
     border: 1px solid #E8E8E8;
     outline: none;
+    padding-left: 15px;
 }
 
 form .box-password label {
@@ -127,7 +129,7 @@ form .box-password label {
 
 form .box-password input::placeholder {
     color: #1A202C;
-    padding-left: 17px;
+    padding-left: 10px;
     font-size: 14px;
 }
 
@@ -266,6 +268,7 @@ form .options .remember a {
     align-items: center;
     gap: 1rem;
     flex-direction: column;
+    margin-top: 25px;
     width: 100%;
 }
 
@@ -273,11 +276,12 @@ form .options .remember a {
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
     margin-top: 10px;
+    opacity: 1;
 }
 
 #btn-senha {
     height: 35px;
-    width: 200px;
+    width: 50px;
     font-weight: 700;
     font-family: 'Lato', sans-serif;
     border: none;
@@ -289,9 +293,4 @@ form .options .remember a {
     font-weight: 500;
     color: #fff;
     background: #278854;
-    opacity: 0;
-}
-
-.opacity {
-    opacity: 0;
 }
